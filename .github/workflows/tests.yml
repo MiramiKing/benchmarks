@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           find frameworks | grep requirements.txt | xargs -n 1 pip install -r
-          pip install pytest pytest-aio
+          pip install pytest pytest-aio pytest_asyncio
       - name: Test with pytest
         run: |
           pytest frameworks
