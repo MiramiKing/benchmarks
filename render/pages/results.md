@@ -37,21 +37,21 @@ Read more about the benchmark: [The Methodic](/py-frameworks-bench/about/)
                     label: 'Single HTML response (req/s)',
                     data: [{% for res in results_html %}'{{res.req}}',{% endfor %}],
                     backgroundColor: [
-                        '#b9ddf1', '#afd6ed', '#a5cfe9', '#9bc7e4', '#92c0df', '#89b8da', '#80b0d5', '#79aacf', '#72a3c9', '#6a9bc3', '#6394be', '#5b8cb8', '#5485b2', '#4e7fac', '#4878a6', '#437a9f', '#3d6a98', '#376491', '#305d8a', '#2a5783',
+                        '#b9ddf1', '#afd6ed', '#a5cfe9', '#9bc7e4', '#92c0df', '#89b8da', '#80b0d5',
                     ].reverse()
                 },
                 {
                     label: 'Work with JSON (req/s)',
                     data: [{% for res in results_api %}'{{res.req}}',{% endfor %}],
                     backgroundColor: [
-                        '#b3e0a6', '#a5db96', '#98d687', '#8ed07f', '#85ca77', '#7dc370', '#75bc69', '#6eb663', '#67af5c', '#61a956', '#59a253', '#519c51', '#49964f', '#428f4d', '#398949', '#308344', '#2b7c40', '#27763d', '#256f3d', '#24693d',
+                        '#b3e0a6', '#a5db96', '#98d687', '#8ed07f', '#85ca77', '#7dc370', '#75bc69',
                     ].reverse()
                 },
                 {
                     label: 'Upload file (req/s)',
                     data: [{% for res in results_upload %}'{{res.req}}',{% endfor %}],
                     backgroundColor: [
-                        '#ffc685', '#fcbe75', '#f9b665', '#f7ae54', '#f5a645', '#f59c3c', '#f49234', '#f2882d', '#f07e27', '#ee7422', '#e96b20', '#e36420', '#db5e20', '#d25921', '#ca5422', '#c14f22', '#b84b23', '#af4623', '#a64122', '#9e3d22',
+                        '#ffc685', '#fcbe75', '#f9b665', '#f7ae54', '#f5a645', '#f59c3c', '#f49234', 
                     ].reverse()
                 },
             ]
