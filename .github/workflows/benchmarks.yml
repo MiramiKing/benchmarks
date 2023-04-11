@@ -32,6 +32,42 @@ jobs:
           name: blacksheep
           network: data
 
+      - name: Benchmark Baize
+        uses: ./.github/actions/benchmark
+        with:
+          name: baize
+          network: data
+
+      - name: Benchmark Starlette
+        uses: ./.github/actions/benchmark
+        with:
+          name: starlette
+          network: data
+
+      - name: Benchmark Django
+        uses: ./.github/actions/benchmark
+        with:
+          name: django
+          network: data
+
+      - name: Benchmark FastApi
+        uses: ./.github/actions/benchmark
+        with:
+          name: fastapi
+          network: data
+
+      - name: Benchmark Tornado
+        uses: ./.github/actions/benchmark
+        with:
+          name: tornado
+          network: data
+
+      - name: Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: results
+          path: ./results
+
   readme:
     name: Update Results
     needs: benchmark
