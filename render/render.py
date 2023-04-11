@@ -1,5 +1,6 @@
 import csv
 import datetime
+import os
 import statistics
 from collections import namedtuple
 from pathlib import Path
@@ -76,7 +77,9 @@ def parse_version(name):
     return version and version.group(1) or ''
 
 def render_template(template, target, **ctx):
-    with open(target, 'w+') as target:
+    if not os.path.exists(target):
+        os.mknod(target)
+    with open(target, 'w') as target:
         target.write(template.render(**ctx))
 
 
