@@ -3,7 +3,7 @@ import datetime
 import statistics
 from collections import namedtuple
 from pathlib import Path
-
+import re
 import jinja2
 
 NOW = datetime.datetime.utcnow()
