@@ -76,7 +76,7 @@ def parse_version(name):
     return version and version.group(1) or ''
 
 def render_template(template, target, **ctx):
-    with open(target, 'w') as target:
+    with open(target, 'w+') as target:
         target.write(template.render(**ctx))
 
 
