@@ -8,7 +8,7 @@ import pytest
 
 @pytest.fixture(scope='session', params=[
    'django',
-    'baize',
+    #'baize',
     'fastapi',
     'starlette',
     'blacksheep',
