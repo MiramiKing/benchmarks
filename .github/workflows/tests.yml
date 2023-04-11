@@ -10,7 +10,7 @@ on:
 
 jobs:
   tests:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu
     steps:
       - name: Checkout changes
         uses: actions/checkout@v2
