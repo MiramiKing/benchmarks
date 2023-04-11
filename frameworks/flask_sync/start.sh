@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/local/bin/gunicorn  --bind 0.0.0.0:8080 app:app

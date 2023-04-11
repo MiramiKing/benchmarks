@@ -1,0 +1,27 @@
+name: test
+
+on:
+  pull_request:
+    branches: [master]
+
+
+  push:
+    branches: [ master, develop ]
+
+jobs:
+  tests:
+    runs-on: ubuntu_latest
+    steps:
+      - name: Checkout changes
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+
+      - name: Install dependencies
+        run: |
+          find frameworks | grep requirements.txt | xargs -n 1 pip install -r
+          pip install pytest pytest-aio
+      - name: Test with pytest
+        run: |
+          pytest frameworks
