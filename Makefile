@@ -7,6 +7,51 @@ else
 	HOSTNAME := host.docker.internal
 endif
 
+$(VIRTUAL_ENV): frameworks/*/requirements.txt
+	@[ -d $(VIRTUAL_ENV) ] || python3 -m venv $(VIRTUAL_ENV)
+	find frameworks | grep requirements | xargs -n1 $(VIRTUAL_ENV)/bin/pip install -r
+	touch $(VIRTUAL_ENV)
+
+.PHONY:
+benchmark-base:
+	docker build $(CURDIR) -t horneds/py-async-benchmark
+	docker push horneds/py-async-benchmark
+
+.PHONY:
+release:
+	git checkout develop
+	git pull
+	git checkout master
+	git pull
+	git merge develop
+	git checkout develop
+	git push origin develop master
+
+APP ?= aiohttp
+
+.PHONY: run
+run:
+	docker build -f $(CURDIR)/frameworks/Dockerfile -t benchmarks:$(APP) $(CURDIR)/frameworks/$(APP)
+	docker run --rm -it --publish 8080:8080 --name benchmark benchmarks:$(APP)
+
+.PHONY: clean
+clean:
+	find $(CURDIR) -name "*.py[co]" -delete
+	find $(CURDIR)/$(MODULE) -name "__pycache__" | xargs rm -rf
+	rm -rf $(CURDIR)/results/*.csv
+
+.PHONY: render
+render: $(VIRTUAL_ENV)
+	$(VIRTUAL_ENV)/bin/python3 render/render.py
+	mkdir -p $(CURDIR)/results/$(DATE)
+	cp $(CURDIR)/results/*.csv $(CURDIR)/results/$(DATE)/.
+
+
+.PHONY: tests t
+tests t: $(VIRTUAL_ENV)
+	$(VIRTUAL_ENV)/bin/pip install pytest pytest-aio
+	$(VIRTUAL_ENV)/bin/pytest frameworks
+
 .PHONY: benchmark
 benchmark:
 	@make aiohttp
