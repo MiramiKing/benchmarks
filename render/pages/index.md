@@ -1,13 +1,14 @@
 ---
 layout: home
 list_title: Archive
-description:  Python webframeworks benchmarks
+description: Python webframeworks benchmarks
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
 
 This is a simple benchmark for python async webframeworks. Almost all of the
-frameworks are ASGI-compatible. 
+frameworks are ASGI-compatible (aiohttp and tornado are exceptions on the
+moment).
 
 The objective of the benchmark is not testing deployment (like uvicorn vs
 hypercorn and etc) or database (ORM, drivers) but instead test the frameworks
@@ -17,12 +18,13 @@ queries), routing, responses.
 * Read about the benchmark: [The Methodic](methodic.md)
 * Check complete results for the latest benchmark here: [Results ({{ now.strftime('%Y-%m-%d') }})](_posts/{{ now.strftime('%Y-%m-%d') }}-results.md)
 
+
 ## Combined results
 
 <canvas id="chart" style="margin-bottom: 2em"></canvas>
 <script>
-    let ctx = document.getElementById('chart').getContext('2d');
-    let myChart = new Chart(ctx, {
+    var ctx = document.getElementById('chart').getContext('2d');
+    var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: [{% for res in results %}'{{res.name}}',{% endfor %}],
@@ -31,7 +33,7 @@ queries), routing, responses.
                     label: '# of requests',
                     data: [{% for res in results %}'{{res.req}}',{% endfor %}],
                     backgroundColor: [
-                        '#4E79A7', '#A0CBE8', '#F28E2B', '#FFBE7D', '#59A14F', '#8CD17D', '#B6992D', '#F1CE63',
+                        '#4E79A7', '#A0CBE8', '#F28E2B', '#FFBE7D', '#59A14F', '#8CD17D', '#B6992D', 
                     ]
                 },
             ]
@@ -44,8 +46,7 @@ Sorted by sum of completed requests
 | Framework | Requests completed | Avg Latency 50% (ms) | Avg Latency 75% (ms) | Avg Latency (ms) |
 | --------- | -----------------: | -------------------: | -------------------: | ---------------: |
 {% for res in results -%}
-| [{{res.name }}](https://pypi.org/project/{{ res.name }}/) `{{versions[res.name] }}` | {{  res.req  }} | {{ res.lt50|round(2) }} |
-{{ res.lt75|round(2)  }} | {{res.lt_avg|round(2) }}
+| [{{ res.name }}](https://pypi.org/project/{{ res.name }}/) `{{ versions[res.name] }}` | {{ res.req }} | {{ res.lt50|round(2) }} | {{ res.lt75|round(2) }} | {{ res.lt_avg|round(2) }}
 {% endfor %}
 
 More details: [Results ({{ now.strftime('%Y-%m-%d') }})](_posts/{{ now.strftime('%Y-%m-%d') }}-results.md)

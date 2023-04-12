@@ -44,7 +44,7 @@ the hardware specification for the runs is:
     gunicorn -k uvicorn.workers.UvicornWorker -b 0.0.0.0:8080 app:app
 
 Applications' source code can be found
-[here](https://github.com/klen/py-frameworks-bench/tree/develop/frameworks).
+[here](https://github.com/MiramiKing/benchmarks/tree/master/frameworks).
 
 Results received with WRK utility using the params:
 
