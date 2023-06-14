@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The Methodic
-description: Python webframeworks benchmark's methodic
+description: Python web-frameworks benchmark's methodic
 permalink: /about/
 ---
 
