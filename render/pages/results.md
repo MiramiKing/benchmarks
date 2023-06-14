@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Results ({{ now.strftime('%Y-%m-%d') }})
-description: Python Webframeworks Benchmark Results ({{ now.strftime('%Y-%m-%d') }})
+description: Python Web-frameworks Benchmark Results ({{ now.strftime('%Y-%m-%d') }})
 date:   ({{ now.strftime('%Y-%m-%d') }})
 categories: results
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
 
-> This is a simple benchmark for python async webframeworks. Almost all of the
-> frameworks are ASGI-compatible 
+> This benchmark provides a straightforward evaluation of Python async web-frameworks,
+> with the majority of frameworks being compatible with ASGI.
 > 
-> The objective of the benchmark is not testing deployment (like uvicorn vs
-> hypercorn and etc) or database (ORM, drivers) but instead test the frameworks
-> itself. The benchmark checks request parsing (body, headers, formdata,
-> queries), routing, responses.
+> While the benchmark does not assess deployment 
+> (such as uvicorn versus hypercorn, etc.) or databases (ORMs, drivers),
+> it seeks to evaluate the strength of the frameworks themselves. 
+> The benchmark analyzes request parsing (including body, headers, formdata, and queries), routing, and responses.
 
 Read more about the benchmark: [The Methodic](/py-frameworks-bench/about/)
 

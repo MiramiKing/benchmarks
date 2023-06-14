@@ -1,12 +1,12 @@
 ---
 layout: home
 list_title: Archive
-description: Python webframeworks benchmarks
+description: Python web-frameworks benchmarks
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
 
-This is a simple benchmark for python async webframeworks. Almost all of the
+This is a simple benchmark for python async web-frameworks. Almost all of the
 frameworks are ASGI-compatible (aiohttp and tornado are exceptions on the
 moment).
 
