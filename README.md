@@ -25,7 +25,7 @@ The benchmark analyzes request parsing (including body, headers, formdata, and q
 
 
 
-<img src='https://quickchart.io/chart?width=800&height=400&c=%7Btype%3A%22bar%22%2Cdata%3A%7Blabels%3A%5B%22blacksheep%22%2C%22blacksheep%22%2C%22baize%22%2C%22starlette%22%2C%22baize%22%2C%22starlette%22%2C%22fastapi%22%2C%22fastapi%22%2C%22aiohttp%22%2C%22aiohttp%22%2C%22tornado%22%2C%22tornado%22%2C%22django%22%2C%22django%22%5D%2Cdatasets%3A%5B%7Blabel%3A%22num%20of%20req%22%2Cdata%3A%5B488070%2C417555%2C324255%2C317775%2C279480%2C262845%2C231855%2C193425%2C187590%2C156375%2C123630%2C102600%2C46215%2C36120%5D%7D%5D%7D%7D' />
+<img src='https://quickchart.io/chart?width=800&height=400&c=%7Btype%3A%22bar%22%2Cdata%3A%7Blabels%3A%5B%22blacksheep%22%2C%22baize%22%2C%22starlette%22%2C%22fastapi%22%2C%22aiohttp%22%2C%22tornado%22%2C%22django%22%5D%2Cdatasets%3A%5B%7Blabel%3A%22num%20of%20req%22%2Cdata%3A%5B526020%2C353400%2C336285%2C247155%2C211470%2C134790%2C52755%5D%7D%5D%7D%7D' />
 
 ## The Methodic
 
@@ -72,20 +72,13 @@ Sorted by max req/s
 
 | Framework | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
 | --------- | -----------: | ---------------: | ---------------: | ---------------: |
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 17071 | 4.30 | 4.63 | 3.83
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 14541 | 4.68 | 5.41 | 4.49
-| [baize](https://pypi.org/project/baize/) `0.20.3` | 12601 | 5.88 | 6.34 | 5.08
-| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 11788 | 6.41 | 6.85 | 5.39
-| [baize](https://pypi.org/project/baize/) `0.20.3` | 11150 | 6.32 | 7.17 | 5.70
-| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 9810 | 7.01 | 8.16 | 6.50
-| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 8113 | 9.44 | 10.11 | 8.02
-| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 7042 | 8.92 | 9.12 | 9.09
-| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 6687 | 9.89 | 12.20 | 9.76
-| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 5890 | 10.59 | 11.05 | 10.88
-| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 3285 | 19.45 | 19.53 | 19.48
-| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 2826 | 22.83 | 23.13 | 22.65
-| [django](https://pypi.org/project/django/) `4.2.2` | 1204 | 50.89 | 52.34 | 53.33
-| [django](https://pypi.org/project/django/) `4.2.2` | 929 | 66.60 | 72.28 | 68.95
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 18565 | 2.65 | 4.86 | 3.65
+| [baize](https://pypi.org/project/baize/) `0.20.3` | 13632 | 3.60 | 6.73 | 4.68
+| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 12446 | 3.94 | 7.36 | 5.12
+| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 8348 | 5.82 | 11.01 | 7.83
+| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 7662 | 8.36 | 8.39 | 8.35
+| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 3614 | 17.67 | 17.73 | 17.70
+| [django](https://pypi.org/project/django/) `4.2.2` | 1382 | 44.51 | 45.84 | 46.55
 
 
 </details>
@@ -98,20 +91,13 @@ Sorted by max req/s
 
 | Framework | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
 | --------- | -----------: | ---------------: | ---------------: | ---------------: |
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 9732 | 7.54 | 8.37 | 6.55
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 8698 | 7.80 | 9.54 | 7.32
-| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 7226 | 10.65 | 11.36 | 8.82
-| [baize](https://pypi.org/project/baize/) `0.20.3` | 6258 | 10.37 | 10.60 | 10.21
-| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 5862 | 11.01 | 14.04 | 10.88
-| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 5421 | 13.93 | 15.34 | 11.78
-| [baize](https://pypi.org/project/baize/) `0.20.3` | 5276 | 12.03 | 12.63 | 12.12
-| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 4619 | 14.67 | 18.02 | 13.82
-| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 3317 | 19.20 | 19.26 | 19.29
-| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 2839 | 22.52 | 22.57 | 22.55
-| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 2787 | 22.66 | 23.00 | 22.95
-| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 2248 | 28.12 | 29.36 | 28.46
-| [django](https://pypi.org/project/django/) `4.2.2` | 1073 | 57.11 | 58.56 | 59.51
-| [django](https://pypi.org/project/django/) `4.2.2` | 851 | 71.12 | 80.97 | 75.04
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 10339 | 4.74 | 8.99 | 6.17
+| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 7399 | 6.61 | 12.51 | 8.63
+| [baize](https://pypi.org/project/baize/) `0.20.3` | 6898 | 8.65 | 10.24 | 9.27
+| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 5795 | 8.47 | 16.00 | 11.02
+| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 3916 | 16.31 | 16.42 | 16.34
+| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 3056 | 20.93 | 20.99 | 20.93
+| [django](https://pypi.org/project/django/) `4.2.2` | 1241 | 50.06 | 51.44 | 51.56
 
 </details>
 
@@ -123,20 +109,13 @@ Sorted by max req/s
 
 | Framework | Requests/sec | Latency 50% (ms) | Latency 75% (ms) | Latency Avg (ms) |
 | --------- | -----------: | ---------------: | ---------------: | ---------------: |
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 5735 | 11.11 | 14.55 | 11.14
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 4598 | 13.84 | 17.79 | 13.89
-| [baize](https://pypi.org/project/baize/) `0.20.3` | 2758 | 22.28 | 26.09 | 23.22
-| [baize](https://pypi.org/project/baize/) `0.20.3` | 2206 | 27.87 | 33.04 | 28.99
-| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 2171 | 35.53 | 37.54 | 29.42
-| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 2147 | 29.72 | 29.84 | 29.80
-| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 2118 | 30.08 | 30.26 | 30.19
-| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 1923 | 39.48 | 42.52 | 33.22
-| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 1851 | 39.62 | 44.02 | 34.50
-| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 1766 | 35.97 | 36.57 | 36.23
-| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 1748 | 36.04 | 37.44 | 36.60
-| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 1589 | 45.00 | 50.19 | 40.24
-| [django](https://pypi.org/project/django/) `4.2.2` | 804 | 73.85 | 77.55 | 79.32
-| [django](https://pypi.org/project/django/) `4.2.2` | 628 | 97.13 | 107.08 | 101.71
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 6164 | 7.96 | 14.97 | 10.37
+| [baize](https://pypi.org/project/baize/) `0.20.3` | 3030 | 20.24 | 23.86 | 21.14
+| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 2574 | 19.12 | 35.82 | 24.83
+| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 2520 | 25.44 | 25.54 | 25.43
+| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 2334 | 20.98 | 39.69 | 27.38
+| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 2316 | 27.56 | 27.68 | 27.61
+| [django](https://pypi.org/project/django/) `4.2.2` | 894 | 68.85 | 77.04 | 71.49
 
 
 </details>
@@ -149,20 +128,13 @@ Sorted by completed requests
 
 | Framework | Requests completed | Avg Latency 50% (ms) | Avg Latency 75% (ms) | Avg Latency (ms) |
 | --------- | -----------------: | -------------------: | -------------------: | ---------------: |
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 488070 | 7.65 | 9.18 | 7.17
-| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 417555 | 8.77 | 10.91 | 8.57
-| [baize](https://pypi.org/project/baize/) `0.20.3` | 324255 | 12.84 | 14.34 | 12.84
-| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 317775 | 17.53 | 18.58 | 14.54
-| [baize](https://pypi.org/project/baize/) `0.20.3` | 279480 | 15.41 | 17.61 | 15.6
-| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 262845 | 19.21 | 22.07 | 17.29
-| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 231855 | 20.95 | 22.66 | 17.67
-| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 193425 | 23.19 | 26.8 | 21.27
-| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 187590 | 19.28 | 19.41 | 19.39
-| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 156375 | 23.1 | 23.83 | 23.48
-| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 123630 | 24.02 | 24.12 | 24.07
-| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 102600 | 28.97 | 29.69 | 29.11
-| [django](https://pypi.org/project/django/) `4.2.2` | 46215 | 60.62 | 62.82 | 64.05
-| [django](https://pypi.org/project/django/) `4.2.2` | 36120 | 78.28 | 86.78 | 81.9
+| [blacksheep](https://pypi.org/project/blacksheep/) `1.2.15` | 526020 | 5.12 | 9.61 | 6.73
+| [baize](https://pypi.org/project/baize/) `0.20.3` | 353400 | 10.83 | 13.61 | 11.7
+| [starlette](https://pypi.org/project/starlette/) `0.28.0` | 336285 | 9.89 | 18.56 | 12.86
+| [fastapi](https://pypi.org/project/fastapi/) `0.97.0` | 247155 | 11.76 | 22.23 | 15.41
+| [aiohttp](https://pypi.org/project/aiohttp/) `3.8.4` | 211470 | 16.7 | 16.78 | 16.71
+| [tornado](https://pypi.org/project/tornado/) `6.3.2` | 134790 | 22.05 | 22.13 | 22.08
+| [django](https://pypi.org/project/django/) `4.2.2` | 52755 | 54.47 | 58.11 | 56.53
 
 </details>
 
