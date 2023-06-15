@@ -16,7 +16,7 @@ categories: results
 > it seeks to evaluate the strength of the frameworks themselves. 
 > The benchmark analyzes request parsing (including body, headers, formdata, and queries), routing, and responses.
 
-Read more about the benchmark: [The Methodic](/py-frameworks-bench/about/)
+Read more about the benchmark: [The Methodic](/benchmarks/about/)
 
 # Table of contents
 
